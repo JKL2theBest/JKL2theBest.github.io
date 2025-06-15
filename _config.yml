@@ -6,7 +6,6 @@ description: >-
 baseurl: ""  
 url: "https://jkl2thebest.github.io"  
 
-twitter_username: ""  
 github_username: JKL2theBest  
 
 theme: minima  
@@ -23,11 +22,10 @@ social_links:
     url: mailto:muhammet.jkl2.suhanguylev@gmail.com  
 
 # Персональные данные для вывода (если шаблон поддерживает)  
-author:  
-  name: Суханкулиев Мухаммет  
-  role: Студент ИТМО, Факультет Информационной Безопасности  
-  location: Санкт-Петербург, Россия  
-  contact_phone: "+7 (931) 535-5395"  
+author_name: "Суханкулиев Мухаммет"
+author_role: "Студент ИТМО, Факультет Информационной Безопасности"
+author_location: "Санкт-Петербург, Россия"
+author_contact_phone: "+7 (931) 535-5395"
 
 # Исключить из сборки (при необходимости)  
 exclude:  
