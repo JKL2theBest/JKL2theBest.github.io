@@ -1,37 +1,22 @@
-# ----------------------------
-# Site Identity
-# ----------------------------
-title: "JKL2theBest — Личный сайт Мухаммета Суханкулиева"
+title: "JKL2theBest — Личный сайт"
 email: "muhammet.jkl2.suhanguylev@gmail.com"
 description: >-
   Персональный сайт Мухаммета Суханкулиева: DevOps, информационная безопасность, тестирование, CTF.
   Здесь вы найдете проекты, портфолио и контактную информацию.
 
-baseurl: "" # оставить пустым если сайт на GitHub Pages без подкаталога
+baseurl: ""
 url: "https://jkl2thebest.github.io"
 
-# ----------------------------
-# Author Info (мета-данные)
-# ----------------------------
-author:
-  name: "Мухаммет Суханкулиев"
-  job_title: "DevOps / QA / Infosec"
-  location: "Санкт-Петербург, Россия"
-  email: "muhammet.jkl2.suhanguylev@gmail.com"
-  telegram: "https://t.me/jkl2youtube"
-  github: "https://github.com/JKL2theBest"
+author_name: "Мухаммет Суханкулиев"
+author_job_title: "DevOps / QA / Infosec"
+author_location: "Санкт-Петербург, Россия"
+author_email: "muhammet.jkl2.suhanguylev@gmail.com"
+author_telegram: "https://t.me/jkl2youtube"
+author_github: "https://github.com/JKL2theBest"
 
-# ----------------------------
-# Social media (иконки)
-# ----------------------------
 github_username: "JKL2theBest"
-linkedin_username: ""
 telegram_username: "jkl2youtube"
-twitter_username: "" # если появится
 
-# ----------------------------
-# Build Settings
-# ----------------------------
 theme: minima
 
 plugins:
@@ -43,26 +28,6 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
-# ----------------------------
-# SEO (jekyll-seo-tag)
-# ----------------------------
-seo:
-  type: "Person"
-  name: "Мухаммет Суханкулиев"
-  url: "https://jkl2thebest.github.io"
-  description: "Личный сайт, портфолио и учебные материалы JKL2theBest"
-  twitter:
-    username: ""
-    card: "summary"
-  social:
-    name: "JKL2theBest"
-    links:
-      - "https://github.com/JKL2theBest"
-      - "https://t.me/jkl2youtube"
-
-# ----------------------------
-# Exclusions (не компилировать)
-# ----------------------------
 exclude:
   - README.md
   - LICENSE
@@ -74,9 +39,6 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
 
-# ----------------------------
-# Defaults (по умолчанию)
-# ----------------------------
 defaults:
   -
     scope:
@@ -90,16 +52,3 @@ defaults:
       path: ""
     values:
       layout: "default"
-
-# ----------------------------
-# Collections (если планируешь)
-# ----------------------------
-# collections:
-#   projects:
-#     output: true
-#     permalink: /projects/:name/
-
-# ----------------------------
-# Custom variables (если потребуется)
-# ----------------------------
-# my_cv_url: "/assets/files/Sukhankuliev_M_CV.pdf"
