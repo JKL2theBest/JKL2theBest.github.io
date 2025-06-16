@@ -1,36 +1,105 @@
-title: JKL2theBest  
-email: muhammet.jkl2.suhanguylev@gmail.com  
+# ----------------------------
+# Site Identity
+# ----------------------------
+title: "JKL2theBest — Личный сайт Мухаммета Суханкулиева"
+email: "muhammet.jkl2.suhanguylev@gmail.com"
 description: >-
-  Суханкулиев Мухаммет — студент ИТМО, факультет информационной безопасности.  
+  Персональный сайт Мухаммета Суханкулиева: DevOps, информационная безопасность, тестирование, CTF.
+  Здесь вы найдете проекты, портфолио и контактную информацию.
 
-baseurl: ""  
-url: "https://jkl2thebest.github.io"  
+baseurl: "" # оставить пустым если сайт на GitHub Pages без подкаталога
+url: "https://jkl2thebest.github.io"
 
-github_username: JKL2theBest  
+# ----------------------------
+# Author Info (мета-данные)
+# ----------------------------
+author:
+  name: "Мухаммет Суханкулиев"
+  job_title: "DevOps / QA / Infosec"
+  location: "Санкт-Петербург, Россия"
+  email: "muhammet.jkl2.suhanguylev@gmail.com"
+  telegram: "https://t.me/jkl2youtube"
+  github: "https://github.com/JKL2theBest"
 
-theme: minima  
+# ----------------------------
+# Social media (иконки)
+# ----------------------------
+github_username: "JKL2theBest"
+linkedin_username: ""
+telegram_username: "jkl2youtube"
+twitter_username: "" # если появится
+
+# ----------------------------
+# Build Settings
+# ----------------------------
+theme: minima
+
 plugins:
-  - jekyll-feed  
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-include-cache
 
-# Контакты и соцсети для удобства отображения на сайте  
-social_links:  
-  - name: GitHub  
-    url: https://github.com/JKL2theBest  
-  - name: Telegram  
-    url: https://t.me/jkl2youtube  
-  - name: Email  
-    url: mailto:muhammet.jkl2.suhanguylev@gmail.com  
+markdown: kramdown
+highlighter: rouge
 
-# Персональные данные для вывода (если шаблон поддерживает)  
-author_name: "Суханкулиев Мухаммет"
-author_role: "Студент ИТМО, Факультет Информационной Безопасности"
-author_location: "Санкт-Петербург, Россия"
-author_contact_phone: "+7 (931) 535-5395"
+# ----------------------------
+# SEO (jekyll-seo-tag)
+# ----------------------------
+seo:
+  type: "Person"
+  name: "Мухаммет Суханкулиев"
+  url: "https://jkl2thebest.github.io"
+  description: "Личный сайт, портфолио и учебные материалы JKL2theBest"
+  twitter:
+    username: ""
+    card: "summary"
+  social:
+    name: "JKL2theBest"
+    links:
+      - "https://github.com/JKL2theBest"
+      - "https://t.me/jkl2youtube"
 
-# Исключить из сборки (при необходимости)  
-exclude:  
-  - Gemfile  
-  - Gemfile.lock  
-  - node_modules/  
-  - vendor/  
+# ----------------------------
+# Exclusions (не компилировать)
+# ----------------------------
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
 
+# ----------------------------
+# Defaults (по умолчанию)
+# ----------------------------
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Мухаммет Суханкулиев"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+
+# ----------------------------
+# Collections (если планируешь)
+# ----------------------------
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:name/
+
+# ----------------------------
+# Custom variables (если потребуется)
+# ----------------------------
+# my_cv_url: "/assets/files/Sukhankuliev_M_CV.pdf"
