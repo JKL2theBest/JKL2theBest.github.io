@@ -117,6 +117,13 @@ title: Главная
   <div class="hero">
     <h1>Суханкулиев Мухаммет</h1>
     <p><strong>DevOps · QA · Security · C/Python Developer</strong></p>
+  
+    <p>
+      📸 <a href="https://yip.su/RNfE86" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
+        Можете просмотреть мои фотки тут
+      </a>
+    </p>
+  
     <a href="https://github.com/JKL2theBest/ITMO" class="btn-github" target="_blank">
       🔗 Открыть учебный GitHub-репозиторий ITMO
     </a>
