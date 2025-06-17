@@ -119,7 +119,7 @@ title: Главная
     <p><strong>DevOps · QA · Security · C/Python Developer</strong></p>
   
     <p>
-      📸 <a href="https://yip.su/RNfE86" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
+      📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
         Можете просмотреть мои фотки тут
       </a>
     </p>
