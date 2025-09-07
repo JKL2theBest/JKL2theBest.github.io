@@ -127,6 +127,10 @@ title: Главная
     <a href="https://github.com/JKL2theBest/ITMO" class="btn-github" target="_blank">
       🔗 Открыть учебный GitHub-репозиторий ITMO
     </a>
+    
+    <a href="/protected-lab/" class="btn-github" target="_blank" style="background-color: #c53030;">
+      🛡️ Посмотреть защищенную страницу (lab1b. ТиМП)
+    </a>
   </div>
 
   <div class="info-block">
