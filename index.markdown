@@ -119,7 +119,7 @@ title: Главная
     <p><strong>DevOps · QA · Security · C/Python Developer</strong></p>
 
     <p>
-      📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
+      📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #c8ddf2; text-decoration: underline;">
         Можете просмотреть мои фотки тут
       </a>
     </p>
@@ -133,7 +133,7 @@ title: Главная
     </a>
 
     <a href="/lab3b/" class="btn-github" target="_blank" style="background-color: #2f855a;">
-      🧪 Проверить безопасность ПК (lab3b. ТиМП)
+      🧪 Проверить безопасность ПК (Отправить свои данные мне) (lab3b. ТиМП)
     </a>
   </div>
 
