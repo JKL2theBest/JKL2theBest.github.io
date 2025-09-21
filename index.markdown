@@ -78,7 +78,7 @@ title: Главная
   }
 
   .btn-github:hover {
-    background-color: #2c5282;
+    background-color: #c8ddf2;
     transform: translateY(-3px);
   }
 
@@ -119,7 +119,7 @@ title: Главная
     <p><strong>DevOps · QA · Security · C/Python Developer</strong></p>
 
     <p>
-      📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #c8ddf2; text-decoration: underline;">
+      📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
         Можете просмотреть мои фотки тут
       </a>
     </p>
