@@ -57,3 +57,58 @@ p {
     font-size: 0.8em;
     color: #718096;
 }
+/* --- Добавьте эти стили в конец вашего style.css --- */
+
+.options-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.option-box {
+    flex: 1;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.option-box h2 {
+    margin-top: 0;
+}
+
+.option-box p {
+    font-size: 0.95em;
+    flex-grow: 1;
+}
+
+.option-box.recommended {
+    border-color: #2f855a;
+    border-width: 2px;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2f855a;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.btn-blue {
+    background-color: #2b6cb0;
+}
+.btn-blue:hover {
+    background-color: #2c5282;
+}
