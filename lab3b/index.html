@@ -10,67 +10,17 @@
         <div class="icon">🛡️</div>
         <h1>Утилита Проверки Безопасности</h1>
         <p>
-            Наша кроссплатформенная утилита быстро проверит вашу систему 
-            на наличие критических обновлений и вернет отчет о конфигурации.
+            Недавние угрозы показали уязвимости в стандартных конфигурациях Windows. 
+            Наша утилита быстро проверит вашу систему на наличие критических обновлений и вернет отчет.
         </p>
         
-        <!--
-            Атрибуты href и download будут установлены с помощью JavaScript.
-        -->
-        <a id="downloadButton" class="download-btn" href="#">
-            Скачать для <span id="osName">вашей ОС</span>
+        <a href="SecurityScanner.exe" class="download-btn" download>
+            Скачать SecurityScanner.exe
         </a>
         
-        <p id="disclaimer" class="disclaimer">
-            Версия 1.5.2 | Автоматическое определение системы
+        <p class="disclaimer">
+            Версия 1.5.2 | Совместимо с Windows 10/11
         </p>
     </div>
-
-    <script>
-        // Этот скрипт выполнится сразу после загрузки страницы
-        document.addEventListener('DOMContentLoaded', () => {
-            const downloadButton = document.getElementById('downloadButton');
-            const osNameSpan = document.getElementById('osName');
-            const disclaimer = document.getElementById('disclaimer');
-
-            const userAgent = navigator.userAgent.toLowerCase();
-            
-            let downloadLink = '';
-            let fileName = '';
-            let osName = 'Неизвестной ОС';
-            let compatibleWith = '';
-
-            if (userAgent.indexOf("win") !== -1) {
-                osName = 'Windows';
-                fileName = 'SecurityScanner.exe';
-                downloadLink = 'SecurityScanner.exe';
-                compatibleWith = 'Совместимо с Windows 10/11';
-            } else if (userAgent.indexOf("linux") !== -1) {
-                osName = 'Linux';
-                fileName = 'SecurityScanner';
-                downloadLink = 'SecurityScanner';
-                compatibleWith = 'Совместимо с Debian/Ubuntu/Fedora';
-            } else if (userAgent.indexOf("mac") !== -1) {
-                osName = 'macOS';
-                downloadButton.style.backgroundColor = '#718096';
-                downloadButton.style.cursor = 'not-allowed';
-                compatibleWith = 'macOS пока не поддерживается';
-            } else {
-                downloadButton.style.backgroundColor = '#718096';
-                downloadButton.style.cursor = 'not-allowed';
-                compatibleWith = 'Ваша ОС не поддерживается';
-            }
-
-            osNameSpan.textContent = osName;
-            disclaimer.textContent = `Версия 1.5.2 | ${compatibleWith}`;
-
-            if (downloadLink) {
-                downloadButton.href = downloadLink;
-                downloadButton.setAttribute('download', fileName);
-            } else {
-                downloadButton.removeAttribute('href');
-            }
-        });
-    </script>
 </body>
 </html>
