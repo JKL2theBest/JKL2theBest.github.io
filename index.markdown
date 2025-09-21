@@ -128,7 +128,7 @@ title: Главная
       🔗 Открыть учебный GitHub-репозиторий ITMO
     </a>
     
-    <a href="/lab1b/" class="btn-github" target="_blank" style="background-color: #c53030;">
+    <a href="/lab1b/" class="btn-github" target="_blank" style="background-color: #e1a384;">
       🛡️ Посмотреть защищенную страницу (lab1b. ТиМП)
     </a>
 
