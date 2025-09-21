@@ -1,7 +1,7 @@
 title: "JKL2theBest — Личный сайт"
 email: "muhammet.jkl2.suhanguylev@gmail.com"
 description: >-
-  Персональный сайт Мухаммета Суханкулиева: DevOps, информационная безопасность, тестирование, CTF.
+  Персональный сайт Мухаммета Суханкулиева.
   Здесь вы найдете проекты, портфолио и контактную информацию.
 
 baseurl: ""
@@ -10,7 +10,7 @@ url: "https://jkl2thebest.github.io"
 author_name: "Мухаммет Суханкулиев"
 author_job_title: "DevOps / QA / Infosec"
 author_location: "Санкт-Петербург, Россия"
-author_email: "muhammet.jkl2.suhanguylev@gmail.com"
+author_email: "msuhangulyyev@itmo.ru"
 author_telegram: "https://t.me/jkl2youtube"
 author_github: "https://github.com/JKL2theBest"
 

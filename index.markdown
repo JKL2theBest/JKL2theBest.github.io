@@ -49,7 +49,7 @@ title: Главная
   }
 
   h2::before {
-    content: "💡";
+    content: "кек";
   }
 
   ul {
@@ -119,7 +119,7 @@ title: Главная
     <p><strong>DevOps · QA · Security · C/Python Developer</strong></p>
 
     <p>
-      📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
+      📸 <a href="https://clck.ru/3Mekrw" class="btn-github" target="_blank" style="background-color: #e1a384; text-decoration: underline;">
         Можете просмотреть мои фотки тут
       </a>
     </p>
@@ -141,31 +141,26 @@ title: Главная
     <h2><span class="emoji">🧠</span> О себе</h2>
     <ul>
       <li>3 курс ИТМО, Информационная безопасность</li>
-      <li>DevOps-инженер, тестировщик, специалист по кибербезопасности</li>
-      <li>Языки: Python, C, SQL, Bash</li>
-      <li>Инструменты: Docker, PyTest, Git, Wireshark, Burp Suite</li>
-      <li>Участвую в CTF, разрабатываю тестовые эксплойты</li>
+      <li>Спасите...</li>
     </ul>
 
     <h2><span class="emoji">🛠️</span> Навыки</h2>
     <ul>
-      <li>Информационная безопасность, DevSecOps, ручное и автотестирование</li>
-      <li>CI/CD, Web Vulnerabilities (XSS, SQLi, CSRF, SSRF, LFI, SSTI)</li>
-      <li>Linux/Unix, Shell-скрипты, сетевые протоколы (TCP/IP, HTTP, DNS)</li>
-      <li>Git, Docker, HTML, CSS, JavaScript, PostgreSQL</li>
+      <li>Какие-то да есть...</li>
     </ul>
 
     <h2><span class="emoji">📜</span> Образование и курсы</h2>
     <ul>
       <li>НИУ ИТМО, Информационная безопасность (до 2027)</li>
-      <li>Курсы: Машинное обучение, Веб-технологии, Анализ данных, Кибербезопасность</li>
+      <li>Курсы: Машинное обучение, Веб-технологии, Анализ данных, Кибербезопасность... <br>Нифига, как много всяких курсов прошел...</li>
     </ul>
 
     <h2><span class="emoji">📫</span> Контакты</h2>
     <div class="contacts">
       <a href="mailto:muhammet.jkl2.suhanguylev@gmail.com">✉️ Email</a>
+      <a href="mailto:msuhangulyyev@itmo.ru">✉️ Email (ITMO)</a>
       <a href="https://t.me/jkl2youtube" target="_blank">💬 Telegram</a>
-      <span>📞 +7 (931) 535‑5395</span>
+      <span>📞 +7 (***) не звоните</span>
     </div>
   </div>
 </div>
