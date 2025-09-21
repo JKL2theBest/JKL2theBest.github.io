@@ -67,7 +67,7 @@ title: Главная
     display: inline-block;
     margin-top: 20px;
     padding: 14px 28px;
-    background: #2b6cb0;
+    background: #c8ddf2;
     color: #fff;
     border-radius: 8px;
     font-weight: bold;
