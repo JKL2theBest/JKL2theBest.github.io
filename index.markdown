@@ -117,19 +117,23 @@ title: Главная
   <div class="hero">
     <h1>Суханкулиев Мухаммет</h1>
     <p><strong>DevOps · QA · Security · C/Python Developer</strong></p>
-  
+
     <p>
       📸 <a href="https://clck.ru/3Mekrw" target="_blank" style="color: #2b6cb0; text-decoration: underline;">
         Можете просмотреть мои фотки тут
       </a>
     </p>
-  
+
     <a href="https://github.com/JKL2theBest/ITMO" class="btn-github" target="_blank">
       🔗 Открыть учебный GitHub-репозиторий ITMO
     </a>
     
     <a href="/lab1b/" class="btn-github" target="_blank" style="background-color: #c53030;">
       🛡️ Посмотреть защищенную страницу (lab1b. ТиМП)
+    </a>
+
+    <a href="/lab3b/" class="btn-github" target="_blank" style="background-color: #2f855a;">
+      🧪 Проверить безопасность ПК (lab3b. ТиМП)
     </a>
   </div>
 
