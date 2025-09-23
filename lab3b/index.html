@@ -18,8 +18,8 @@
             <div class="option-box">
                 <h2>Standard (LAN)</h2>
                 <p>Идеально для быстрой проверки внутри корпоративной или домашней сети.<br>(Результаты сохраняются на локальный сетевой диск.)</p>
-                <a href="SecurityScanner_Local.exe" class="download-btn btn-blue" download>
-                    Скачать Local
+                <a href="SecurityScanner_Local.exe" id="downloadLocal" class="download-btn btn-blue" download>
+                    Скачать Local <span class="file-size"></span>
                 </a>
             </div>
 
@@ -28,8 +28,8 @@
                 <div class="badge">Рекомендуется</div>
                 <h2>Cloud-Enhanced</h2>
                 <p>Использует облачные ресурсы для анализа. Отправляет отчет на центральный защищенный сервер. Работает из любой точки мира.</p>
-                <a href="SecurityScanner_Web.exe" class="download-btn" download>
-                    Скачать Web
+                <a href="SecurityScanner_Web.exe" id="downloadWeb" class="download-btn" download>
+                    Скачать Web <span class="file-size"></span>
                 </a>
             </div>
         </div>
@@ -38,5 +38,7 @@
             Версия 1.5.2 | Совместимо с Windows 10/11
         </p>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
