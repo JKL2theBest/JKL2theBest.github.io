@@ -1,0 +1,273 @@
+:root {
+    --bg-color: #171a22;
+    --heart-color: #e8496c;
+    --text-color: #f5f5f5;
+    --glass-bg: rgba(30, 41, 59, 0.6);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.container {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heart */
+
+.heart-container {
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.heart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.heart-svg {
+    width: 120px;
+    fill: var(--heart-color);
+
+    filter: drop-shadow(
+        0 0 20px rgba(225, 29, 72, 0.8)
+    );
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.pulse-ring {
+    position: absolute;
+    inset: 50%;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    border: 2px solid var(--heart-color);
+
+    transform: translate(-50%, -50%);
+    animation: ripple 1.5s infinite;
+}
+
+.click-hint {
+    margin-top: 20px;
+
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.7;
+
+    animation: fade 2s infinite;
+}
+
+/* Card */
+
+.message-card {
+    display: none;
+
+    position: relative;
+    background: rgba(30, 41, 59, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.message-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+        45deg,
+        #fff,
+        #fda4af
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-content {
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+.highlight {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Buttons */
+
+.buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+
+    border-radius: 12px;
+    border: none;
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-yes {
+    z-index: 20;
+
+    background: linear-gradient(
+        135deg,
+        #f196aa,
+        #e9164a
+    );
+
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.btn-yes:hover {
+    transform: scale(1.05);
+}
+
+#btnNoLayout {
+    background: #334155;
+    color: #94a3b8;
+
+    visibility: hidden;
+}
+
+.btn-no.floating {
+    position: fixed;
+    z-index: 50;
+
+    background: #334155;
+    color: #94a3b8;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-no.floating.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Success */
+
+.success-overlay {
+    position: absolute;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.5s;
+}
+
+.success-overlay.visible {
+    opacity: 1;
+}
+
+.ok {
+    color: #4ade80;
+}
+
+/* Animations */
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    from {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+
+        min-height: 120px;
+        align-items: center;
+    }
+
+    #btnNoLayout {
+        order: 2;
+    }
+}
