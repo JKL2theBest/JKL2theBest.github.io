@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             requestAnimationFrame(() => {
                 card.classList.add('visible');
+                btnNoRunner.classList.add('visible'); 
             });
         }, CONFIG.timings.heartHideDelay);
     };
@@ -220,16 +221,11 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.display === 'block' &&
             !isNoButtonRunning
         ) {
-            const rect =
-                btnNoLayout.getBoundingClientRect();
+            const rect = btnNoLayout.getBoundingClientRect();
 
             if (rect.width) {
                 btnNoRunner.style.left = `${rect.left}px`;
                 btnNoRunner.style.top = `${rect.top}px`;
-                btnNoRunner.style.opacity =
-                    getComputedStyle(card).opacity;
-
-                btnNoRunner.classList.add('visible');
             }
         }
 
@@ -239,57 +235,58 @@ document.addEventListener('DOMContentLoaded', () => {
         ) {
             if (cursor.x > 0) {
                 particles.push(
-                    new Particle(
-                        cursor.x,
-                        cursor.y,
-                        'trail'
-                    )
+                    new Particle(cursor.x, cursor.y, 'trail')
                 );
             }
-
             lastTrailTime = timestamp;
         }
 
+        ctx.globalCompositeOperation = 'lighter';
+
         for (let i = particles.length - 1; i >= 0; i--) {
             const particle = particles[i];
-
             particle.update();
             particle.draw();
-
             if (particle.life <= 0) {
                 particles.splice(i, 1);
             }
         }
 
+        ctx.globalCompositeOperation = 'source-over';
+
         if (particles.length > CONFIG.maxParticles) {
-            particles.splice(
-                0,
-                particles.length - CONFIG.maxParticles
-            );
+            particles.splice(0, particles.length - CONFIG.maxParticles);
         }
 
         if (
             accepted &&
-            timestamp - lastFireworkTime >
-                CONFIG.timings.fireworkInterval
+            timestamp - lastFireworkTime > CONFIG.timings.fireworkInterval
         ) {
             createExplosion(
                 Math.random() * width,
                 Math.random() * height,
                 EXPLOSION_PARTS
             );
-
             lastFireworkTime = timestamp;
         }
-
+        
         requestAnimationFrame(animate);
     };
 
     // EVENTS
 
     const resize = () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
+        const dpr = window.devicePixelRatio || 1;
+        width = window.innerWidth;
+        height = window.innerHeight;
+        
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        
+        ctx.scale(dpr, dpr);
+        
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
     };
 
     window.addEventListener('resize', resize);
@@ -309,11 +306,14 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     heart.addEventListener('click', showCard);
-    btnNoRunner.addEventListener('mouseenter', moveNoButton);
-    btnNoRunner.addEventListener('touchstart', (e) => {
+
+    const handleNoInteraction = (e) => {
         e.preventDefault();
         moveNoButton();
-    });
+    };
+
+    btnNoRunner.addEventListener('mouseenter', moveNoButton);
+    btnNoRunner.addEventListener('touchstart', handleNoInteraction, { passive: false });
 
     btnYes.addEventListener('click', accept);
 
