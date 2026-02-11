@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         timings: {
             trailInterval: 50,
-            fireworkInterval: 300,
+            fireworkInterval: 700,
             heartHideDelay: 500,
             acceptHideDelay: 600,
             buttonMoveDuration: '0.4s'
@@ -77,18 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (type === 'star') {
                 this.size = Math.random() * 1.5 + 0.5;
-                speed = Math.random() * 0.15 + 0.05;
+                speed = Math.random() * 0.15 + 0.10;
                 this.decay = 0;
                 this.color = '#fff';
             } else if (type === 'trail') {
-                this.size = Math.random() * 2 + 1;
+                this.size = Math.random() * 2 + 2;
                 speed = Math.random() * 2 + 1;
-                this.decay = 0.04;
+                this.decay = 0.03;
                 this.color = randomPink();
             } else {
-                this.size = Math.random() * 4 + 2;
-                speed = Math.random() * 6 + 2;
-                this.decay = 0.02;
+                this.size = Math.random() * 5 + 2;
+                speed = Math.random() * 3 + 2;
+                this.decay = 0.01;
                 this.color = randomPink();
             }
 
@@ -297,10 +297,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener(
+        'touchend',
+        () => {
+            cursor.x = -999;
+            cursor.y = -999;
+        },
+        { passive: true }
+    );
+
+    document.addEventListener(
         'touchmove',
         (e) => {
-            cursor.x = e.touches[0].clientX;
-            cursor.y = e.touches[0].clientY;
+            if (e.touches.length > 0) {
+                cursor.x = e.touches[0].clientX;
+                cursor.y = e.touches[0].clientY;
+            }
         },
         { passive: true }
     );
